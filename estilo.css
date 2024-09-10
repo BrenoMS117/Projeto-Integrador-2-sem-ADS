@@ -1,0 +1,180 @@
+body,
+h1,
+h2,
+p
+{
+    margin: 10px;
+    padding: 10px
+}
+span {
+    background-color: #5C1A2A;
+    color: #FFBD59;
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    
+    
+
+}
+.container{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+.esq{
+   flex: 1;
+}
+
+.meio{
+
+    flex: 1;
+    text-align: left;
+}
+
+.dir{
+    display: flex;
+    gap: 5px;
+
+}
+.dir1,.dir2{
+    flex:none;
+}
+input[type=submit]{
+    background-color: #5C1A2A;
+    color: #FFBD59;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.desc{
+    font-size: 18px;
+    color: #FFBD59;
+    background-color: #5C1A2A;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+
+}
+
+
+body {
+    font-family: 'Segoe UI', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #13152D;
+    line-height: 1.6;
+
+}
+
+@keyframes slide-in {
+    from {
+        transform: translatex(-100%);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: translatex(0%);
+        opacity: 1;
+
+    }
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    animation: slide-in 1.3s ease-out;
+
+}
+
+nav ul li{
+    
+    margin: 0px;
+
+}
+
+nav ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    
+    
+
+}
+nav ul li a img{
+    max-width: 90%;
+    margin: 20px;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    color: #ff000093;
+    text-shadow: 0 0 5px rgba(0,0, 0, 0.8);
+
+}
+
+
+main{
+    padding: 30px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+    main:hover{
+        transform: scale(1.055); 
+    }
+
+    .formulariopersonalizado{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    textarea{
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3 ease;
+
+    }
+
+    input:focus, textarea:focus{
+        border-color: #9013FE;
+        
+    }
+    button.evento-mouse{
+        padding: 15px 30px;
+        background: linear-gradient(to top, #ff0000, #000000);
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button.evento-mouse:hover{
+        background: #ff0000;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+        transform: translateY(-3px);
+
+    }
+
+    footer{
+        text-align: center;
+        padding: 15px 0;
+        background: linear-gradient(to right, #ff0000, #000000);
+        color: white;
+        margin-top: 20px;
+        border-radius: 0 0 10px 10px;
+
+    }
