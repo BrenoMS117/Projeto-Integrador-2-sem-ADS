@@ -5,34 +5,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>Contato</title>
     <link rel="stylesheet" href="style2.css">
-    
-
 </head>
-<body align="center">
+<body>
     <header>
-        
     </header>
- 
-        <div class="container">
-            <h1><span>CinemaMaximus</span></h1>
-
     <main>
-        <form class="formulario">
-            <label for="Nome">Email</label>
-            <br>
-            
-            <input type="email" name="Email" placeholder="Digite seu Email" required>
-            <br>
-            <label for="Email">Senha</label>
-            <br>
-            <input type="password" name="Senha" placeholder="Digite sua Senha" required>
-            <br>
-            
-            
-        </form>
-        <input type="submit" name="Login" placeholder="Login" value="Login" required/>
-        <br>
-        <input type="submit" name="Register" placeholder="Register" value="Register" required/>
+        <div class="pai">
+            <div class="container">
+            <h1><span>CinemaMaximus</span></h1>
+            <form class="formulario">
+                <label for="Nome">Email</label>  
+                <input type="email" name="Email" placeholder="Digite seu Email" required>
+                <label for="Email">Senha</label>
+                <input type="password" name="Senha" placeholder="Digite sua Senha" required>
+            </form>
+            <input type="submit" name="Login" value="Enviar"/>
+            <button onclick="window.location.href='registro.html'">Registrar</button>
+            <button onclick="window.location.href='index.html'">Voltar</button>
+            </div>
         </div>
     </main>
 </body>
