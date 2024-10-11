@@ -12,7 +12,7 @@ body{
     align-items: center;
 }
 .logo{
-    width: 33%;
+    width: 33%; 
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -25,13 +25,6 @@ span{
     text-align: center;
     background-color: #5C1A2A;
     color: #FFBD59;
-}
-
-.meio{
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .login-register{
@@ -67,12 +60,17 @@ input[type=submit]{
 
 }
 
+main{
+    width: 100%;
+}
+
 ul {
     width: 99%;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     animation: slide-in 1.3s ease-out;
+    padding: 0;
 }
 
 ul li{
