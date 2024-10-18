@@ -1,44 +1,44 @@
 <!DOCTYPE hmtl>
-<html lang="pt-BR">>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>Contato</title>
     <link rel="stylesheet" href="/styles/login-registro.css">
-
-
 </head>
 
 <body>
-
-    <div class="container2">
-        <h1><span>CinemaMaximus</span></h1>
-
-        <main>
+    <main>
+        <div class="container-registro">
+            <h1><span>CinemaMaximus</span></h1>
             <form class="formulario">
-                <label for="Nome">Nome</label>
-                <br>
-                <input type="text" name="Nome" placeholder="Digite seu Nome" required>
-                <br>
-                <label for="Email">Email</label>
-                <br>
-                <input type="email" name="Email" placeholder="Digite seu Email" required>
-                <br>
-                <label for="Email">Senha</label>
-                <br>
-                <input type="password" name="Senha" placeholder="Digite sua Senha" required>
-                <br>
-                <label for="CPF">CPF</label>
-                <br>
-                <input type="tel" name="CPF" placeholder="Digite seu CPF" required>
-
-
+                <div class="container-input">
+                    <label for="Nome">Nome</label>
+                    <input type="text" name="Nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="container-input">
+                    <label for="Nome">Email</label>
+                    <input type="email" name="Email" placeholder="Digite seu Email" required>
+                </div>
+                <div class="container-input">
+                    <label for="Nome">Celular</label>
+                    <input type="text" name="Celular" placeholder="Digite seu número de celular" required>
+                </div>
+                <div class="container-input">
+                    <label for="Email">Senha</label>
+                    <input type="password" name="Senha" placeholder="Digite sua Senha" required>
+                </div>
+                <div class="container-botoes">
+                    <button type="submit" name="Login" id="enviar">Enviar</button>
+                    <div class="registro-voltar">
+                        <button onclick="window.location.href='login.html'">Login</button>
+                        <button onclick="window.location.href='../index.html'">Voltar</button>
+                    </div>
+                </div>
             </form>
-            <input type="submit" name="Login" placeholder="Login" value="Login" required />
-            <br>
-            <input type="submit" name="Register" placeholder="Register" value="Register" required />
-    </div>
+
+        </div>
     </main>
 </body>
 
