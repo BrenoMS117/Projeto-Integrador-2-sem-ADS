@@ -12,17 +12,17 @@
     <main>
         <div class="container">
             <h1><span>CinemaMaximus</span></h1>
-            <form class="formulario">
+            <form class="formulario" action = "javaJSP/login.jsp" method="get" class="formulario" enctype = "multipart/form-data">
                 <div class="container-input">
                     <label for="Nome">Email</label>
-                    <input type="email" name="Email" placeholder="Digite seu Email" required>
+                    <input type="email" name="email" placeholder="Digite seu Email" required>
                 </div>
                 <div class="container-input">
                     <label for="Email">Senha</label>
-                    <input type="password" name="Senha" placeholder="Digite sua Senha" required>
+                    <input type="password" name="senha" placeholder="Digite sua Senha" required>
                 </div>
                 <div class="container-botoes">
-                    <button type="submit" name="Login" id="enviar">Enviar</button>
+                    <button type="submit" name="login" id="enviar">Enviar</button>
                     <div class="registro-voltar">
                         <button onclick="window.location.href='registro.html'">Registrar</button>
                         <button onclick="window.location.href='../index.html'">Voltar</button>
