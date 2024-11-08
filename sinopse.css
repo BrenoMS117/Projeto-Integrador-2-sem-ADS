@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #13152d;
+    line-height: 1.6;
+    margin-left: 109px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 85px;
+}
+
+main {
+    display: flex;
+}
+
+.filmeSinopse {
+    display: flex;
+}
+
+.filmeSinopse .conteinerSinopse {
+    display: flex;
+    flex-direction: column;
+    padding-right: 68px;
+    gap: 29px;
+}
+
+.conteinerSinopse #textSinopse {
+    width: 269px;
+    height: 249px;
+    font-family: 'Roboto';
+    weight: 500;
+    color: #fff;
+}
+
+.conteinerSinopse img{
+    border: none;
+    border-radius: 20px;
+}
+
+.sessoesFilme{
+    display: flex;
+    flex-direction: column;   
+}
+
+.sessoesFilme .horaFilme1{
+    display: flex;
+}
+
+.horaFilme1 .horaFilmeDub{
+    display: block;
+}
