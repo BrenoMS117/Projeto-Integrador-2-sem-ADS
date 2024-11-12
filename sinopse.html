@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/sinopse.css">
     <title>CinemaMaximus</title>
+    <link rel="stylesheet" href="sinopse.css">
 </head>
-
 <body>
-    <header>
-        <img src="../img/logoImagePrincipal.png" alt=""  style="margin-right:49px; ">
-    </header>
-
-    <main>
-        <div class="filmeSinopse">
-            
-            <div class="conteinerSinopse">
-                <img src="../img/interestelar.jpg" width="239px" height="340px">
-            
-            <span id="textSinopse">
-                As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de
-                verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da
-                espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os
-                filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.
-            </span>
+    
+        <header>
+            <div class="logo">
+                <h1><span>CinemaMaximus</span></h1>
+              </div>
+        </header>
+        <div class="conteiner">
+            <div class="filme">
+                <img src="img/interestelar.jpg" alt="Poster do Filme Interstellar">
+                <p>As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie.
+                Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos.
+                Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.
+                </p>
             </div>
-            <div class="sessoesFilme">
-                <!-- Duas divs para movimentação de horario de sessão -->
-                <div class="horaFilme1">
-                <div class="horaFilmeDub">
-                    <span class="textHoraFilme">DUB</span>
-                    <button class="btHorarios" type="button">12:00</button>
-                    <button class="btHorarios" type="button">15:00</button>
-                    <button class="btHorarios" type="button">18:00</button>
+            <div class="horarios">
+                <div class="tipo-sala">
+                    <h2>DUB</h2>
+                    <button>12:00</button>
+                    <button>15:00</button>
+                    <button>19:00</button>
                 </div>
-                <!-- <div class="horaFilmeDub3D">
-                    <span class="textHoraFilme"></span>
-                    <button class="btHorarios" type="button">12:00</button>
-                </div> -->
+                <div class="tipo-sala">
+                    <h2>LEG</h2>
+                    <button>13:00</button>
+                    <button>16:00</button>
+                    <button>22:00</button>
                 </div>
-                <div  class="horaFilme2">
-
+                <div class="tipo-sala">
+                    <h2>DUB 3D</h2>
+                    <button>12:00</button>
+                    <button>18:00</button>
                 </div>
+                <div class="tipo-sala">
+                    <h2>LEG 3D</h2>
+                    <button>12:00</button>
+                    <button>18:00</button>
+                </div>
+            </div>
+            <div class="detalhes-filme">
+                <p>Ficção científica/Aventura</p>
+                <p>86% de Aprovação</p>
+                <p>Tempo de filme: 2h 45m</p>
+                <img src="img/pipoca.png" alt="Ícone de Pipoca">
             </div>
         </div>
-    </main>
+        <div class="fechar-voltar">
+            <button>Fechar Pedido</button>
+            <button onclick="window.location.href='index.html'">Voltar</button>
+        </div>
+    
 </body>
-
 </html>
