@@ -1,0 +1,318 @@
+<%
+    String userName = String.valueOf(session.getAttribute("nome"));
+    String userEmail = String.valueOf(session.getAttribute("email"));
+    //int pkuser = Integer.parseInt(String.valueOf(session.getAttribute("pkuser")));
+
+    String inter = "img/interestelar.jpg";
+    String transformers = "img/transformers.jpeg";
+    String homemaranha = "img/homem-aranha.jpg";
+    String batman = "img/batman.jpg";
+
+    String sHtml = "";
+    if (userName != null) {
+        sHtml = "Bem vindo " + userName + "!";
+    }
+%>
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cinema Maximus</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/estilo.css" />
+        <style type="text/css">
+            body{
+                font-family: 'Segoe UI', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #333;
+                background-color: #13152D;
+                line-height: 1.6;
+                padding: 0 20px;
+            }
+            .container{
+                width: 100%;
+                display:flex ;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .container img{
+                width: 150px;
+            }
+            .logo{
+                width: 33%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .login-register{
+                width: 33%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 15px;
+                color: #f1f1f1;
+
+            }
+            input[type=submit]{
+                font-size: 20px;
+                background-color: #5C1A2A;
+                color: #FFBD59;
+                border: none;
+                padding: 15px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            @keyframes slide-in {
+                from {
+                    transform: translatex(-100%);
+                    opacity: 0;
+
+                }
+
+                to {
+                    transform: translatex(0%);
+                    opacity: 1;
+
+                }
+
+            }
+
+            main{
+                width: 100%;
+                margin-bottom: 300px;
+            }
+
+            ul {
+                width: 99%;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-around;
+                animation: slide-in 1.3s ease-out;
+                padding: 0;
+            }
+
+            ul li{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            ul li a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+
+            /* Estilos do card */
+            .card {
+                display: block;
+                position: relative;
+                width: 300px;
+                height: 450px;
+                /*overflow: hidden;*/
+                text-decoration: none; /* Remove o sublinhado do link */
+            }
+
+            .card-front img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+
+            .card-back {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                color: white;
+                border-radius: 10px;
+                transform: translateY(0);
+                transition: opacity 0.6s ease;
+                transition: transform 0.6s ease;
+                opacity: 0;
+                z-index: -1;
+            }
+
+            /* Estilos do conteúdo dentro do verso */
+            .card-back .desc h2,
+            .card-back .desc p {
+                margin: 0;
+            }
+
+            /* Efeito de transição ao passar o mouse */
+            .card:hover .card-back {
+                transform: translateY(180%);
+                opacity: 100%;
+            }
+
+            a img{
+                width: 350px;
+                height: 550px;
+                text-align: center;
+                border-radius: 10px;
+            }
+
+            ul li a:hover{
+                color: #ff000093;
+                text-shadow: 0 0 5px rgba(0,0, 0, 0.8);
+            }
+
+            .desc{
+                font-size: 15px;
+                width: 350px;
+                height: 150px;
+                color: #FFBD59;
+                background-color: #5C1A2A;
+                border-radius: 20px;
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+            }
+            footer {
+
+                background-color: #13152D;
+                padding: 16px;
+                color: #FFBD59;
+            }
+
+            .footer-logo{
+                margin: 20px;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                gap: 50px;
+                font-size: 40px;
+                color: #FFBD59;
+
+            }
+
+            .line{
+                width: 1400px;
+                height: 2px;
+                background: #FFFFFFFA;
+
+            }
+
+            .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+            }
+
+            .footer-home{
+                margin-top: 20px;
+                font-size: 18px;
+            }
+
+            .footer-icon img{
+                height: 70px;
+            }
+
+            footer a {
+                margin: 0 16px;
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <section class="logo">
+                    <img src="img/logo.png"></img>
+                </section>
+                <section class="login-register">
+                    <%                        if (userName == null || userName.equals("null")) {
+                            sHtml = "<a href='login.html'><input type='submit' value='Login'></a>";
+                            sHtml += "<a href='registro.html'><input type='submit' value='Registrar'></a>";
+                            out.print(sHtml);
+                        } else {
+                            sHtml = "Bem vindo " + userName + "!";
+                            // Adicionando um link que redireciona para a página de logout
+                            sHtml += "<a href='javaJSP/logout.jsp'><input type='submit' value='Logout' /></a>";
+                            out.print(sHtml);
+                        }
+                    %>
+                </section>
+            </div>
+        </header>
+        <main>
+            <ul>
+                <li>
+                    <a href="javaJSP/filme.jsp?filme=interestelar" class="card">
+                        <div >
+                            <img src="<%=inter%>" alt="INTERESTELAR" />
+                        </div>
+                        <div class="card-back">
+                            <div class="desc">
+                                <h2>INTERESTELAR</h2>
+                                <p>Christopher Nolan</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javaJSP/filme.jsp?filme=transformers" class="card">
+                        <div>
+                            <img src="<%=transformers%>" alt="TRANSFORMERS" />
+                        </div>
+
+                        <div class="card-back">
+                            <div class="desc">
+                                <h2>TRANSFORMERS<br>A Vingança dos Derrotados</h2>
+                                <p>Michael Bay</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javaJSP/filme.jsp?filme=homem-aranha" class="card">
+                        <div>
+                            <img src="<%=homemaranha%>" alt="Homem-Aranha"/>
+                        </div>
+
+                        <div class="card-back">
+                            <div class="desc">
+                                <h2>O Espetacular<br>Homem-Aranha</h2>
+                                <p>Mark Webb</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javaJSP/filme.jsp?filme=batman"" class="card">
+                        <div>
+                            <img src="<%=batman%>" alt="Batman"/>
+                        </div>
+                        <div class="card-back">
+                            <div class="desc">
+                                <h2>The Batman</h2>
+                                <p>Matt Reeves</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <div class="footer-logo">   
+                <span>CINEMAXIMUS</span>
+                <div class="line"></div>
+            </div>
+            <div class="container">
+                <div class="footer-home">
+                    <a href="index.jsp">Home</a>
+                    <span>Copyright © 2024</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
